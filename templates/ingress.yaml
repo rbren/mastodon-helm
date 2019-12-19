@@ -2,10 +2,10 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: {{ template "mastodon.fullname" . }}
+  name: {{ template "fullname" . }}
   labels:
-    app: "{{ template "mastodon.fullname" . }}"
-    chart: "{{ template "mastodon.chart" . }}"
+    app: "{{ template "fullname" . }}"
+    chart: "{{ template "chart" . }}"
     release: {{ .Release.Name | quote }}
     heritage: {{ .Release.Service | quote }}
   annotations:
